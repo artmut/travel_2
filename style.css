@@ -1,0 +1,430 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+  font-family: caption;
+  src: url(fonts/ITCKRIST.TTF);
+}
+@font-face {
+  font-family: slogan;
+  src: url(fonts/Inkfree.ttf);
+}
+@font-face {
+  font-family: adress;
+  src: url(fonts/CENTAUR.TTF);
+}
+
+@keyframes anim_mask {
+  0% {top: -50%;}
+  10% {top: 0;}
+  100% {top: 0;}
+}
+@keyframes anim_mask_left {
+  0% {left: -50%;}
+  10% {left: 0;}
+  100% {left: 0;}
+}
+@keyframes anim_girl {
+  0% {top: 70%;}
+  30% {top: 38%;}
+  100% {top: 38%;}
+}
+@keyframes anim_girl_left {
+  0% {top: 100%;}
+  30% {top: 0%;}
+  100% {top: 0%;}
+}
+@keyframes anim_adress {
+	0%{color: rgba(0,0,0,0);transform: rotate(0deg);}
+	30%{color: rgba(0,0,0,0);transform: rotate(0deg);}
+	44% {color: rgba(0,0,0,1);transform: rotate(0deg);}
+	45% {color: rgba(0,0,0,1);transform: rotate(-5deg);}
+	46% {color: rgba(0,0,0,1);transform: rotate(0deg);}
+	47% {color: rgba(0,0,0,1);transform: rotate(-5deg);}
+	48% {color: rgba(0,0,0,1);transform: rotate(0deg);}
+	49% {color: rgba(0,0,0,1);transform: rotate(-5deg);}
+	50%{color: rgba(0,0,0,1);transform: rotate(0deg);}
+	100%{color: rgba(0,0,0,1);transform: rotate(0deg);}
+}
+@keyframes anim_adress_left {
+	0%{color: rgba(0,0,0,0);padding-left:0px;}
+	30%{color: rgba(0,0,0,0);padding-left:0px;}
+	44% {color: rgba(0,0,0,1);padding-left:0px;}
+	45% {color: rgba(0,0,0,1);padding-left:50px;}
+	46% {color: rgba(0,0,0,1);padding-left:0px;}
+	47% {color: rgba(0,0,0,1);padding-left:30px;}
+	48% {color: rgba(0,0,0,1);padding-left:0px;}
+	49% {color: rgba(0,0,0,1);padding-left:20px;}
+	50%{color: rgba(0,0,0,1);padding-left:0px;}
+	100%{color: rgba(0,0,0,1);padding-left:0px;}
+}
+@keyframes anim_text1 {
+  0% {top:-30%;}
+  20% {top:0;}
+  100% {top:0;}
+}
+@keyframes anim_text2 {
+  0% {margin-left:250px;transform: rotate(-30deg);}
+  10% {margin-left:250px;transform: rotate(-30deg);}
+  30% {margin-left:0;transform: rotate(0deg);}
+  100% {margin-left:0;transform: rotate(0deg);}
+}
+@keyframes anim_text3 {
+  0% {margin-left:-350px;transform: rotate(+30deg);}
+  20% {margin-left:-350px;transform: rotate(+30deg);}
+  40% {margin-left:0;transform: rotate(0deg);}
+  100% {margin-left:0;transform: rotate(0deg);}
+}
+@keyframes anim_logo {
+0% {opacity:0;}
+10% {opacity:0;}
+40% {opacity:1;}
+100% {opacity:1;}
+}
+
+
+.main{
+	position: relative;
+	background-color:#82b2d1;
+	overflow: hidden;
+	text-align:left;
+	}
+	
+.mask{
+	position:absolute;
+	width:100%;
+	height:50%;
+	/*animation: MoveUpDown 7s linear infinite;*/
+	animation-name: anim_mask;	
+	animation-duration: 7s;
+	animation-iteration-count:infinite;	
+	}
+	
+.logo{
+	position:absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top:15px;
+	opacity:0;
+	animation-name: anim_logo;
+	animation-duration: 7s;
+	animation-iteration-count:infinite;	
+	animation-fill-mode: forwards;
+	}
+	
+
+	
+	
+.text1{
+	position:absolute;
+	display:block;
+	text-align:center;
+	font-family:"caption";
+	color:#cfba04;
+	font-size:48px;
+	width:100%;
+	margin-top:70px;
+	animation-name: anim_text1;
+	animation-duration: 7s;
+	animation-iteration-count:infinite;	
+	animation-fill-mode: forwards;
+	}
+	
+.text2{
+	position:absolute;
+	display:block;
+	text-align:center;
+	font-family:"slogan";
+	font-size:24px;
+	color:#fff;
+	width:100%;
+	margin-top:125px;
+	margin-left:100%;
+	animation-name: anim_text2;
+	animation-duration: 7s;
+	animation-iteration-count:infinite;	
+	animation-fill-mode: forwards;
+	}
+.text3{
+	position:absolute;
+	display:block;
+	text-align:center;
+	font-family:"slogan";
+	font-size:24px;
+	color:#fff;
+	width:100%;
+	margin-top:150px;
+	margin-left:-100%;
+	animation-name: anim_text3;
+	animation-duration: 7s;
+	animation-iteration-count:infinite;	
+	animation-fill-mode: forwards;
+	}
+	
+.girl{
+	position:absolute;
+	left: 0;
+	right: 0;
+	margin:auto;
+	height:50%;
+	display:block;
+	animation-name: anim_girl;
+	animation-duration: 7s;
+	animation-iteration-count:infinite;	
+	animation-fill-mode: forwards;
+	}
+	
+.adres{
+	position:absolute;
+	width:100%;
+	text-align:center;
+	color: rgba(0,0,0,0);
+	font-family:"adress";
+	font-weight:bold;
+	font-size:20px;
+	bottom:5px;
+	animation-name: anim_adress;
+	animation-duration: 7s;
+	animation-iteration-count:infinite;	
+	animation-fill-mode: forwards;
+	}
+	
+.sea{
+	position:absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width:100%;
+	height:30%;
+	bottom:0px;
+	}
+	
+	
+/*For 300x600 size BANNER customize*/
+
+.ads300x600{
+	width:300px;
+	height:600px;
+	}
+	
+	
+/*For 160x600 size BANNER customize*/
+
+.ads160x600{
+	width:160px;
+	height:600px;
+	}
+.ads160x600 .logo{
+	max-width:80px;
+	}
+.ads160x600 .adres{
+	font-size:16px;
+	}
+.ads160x600 .text1{
+	font-size:30px;
+	}
+.ads160x600 .text2{
+	font-size:18px;
+	}
+.ads160x600 .text3{
+	font-size:18px;
+	}
+
+
+
+/*For 336x280 size BANNER customize*/
+
+.ads336x280{
+	width:336px;
+	height:280px;
+	}
+.ads336x280 .logo{
+	margin:10px 0px 0px 10px;
+	max-width:80px;
+	}
+.ads336x280 .text1{
+	width:95%;
+	text-align:right;
+	margin-top:10px;
+	font-size:40px;
+	}
+.ads336x280 .text2{
+	width:95%;
+	text-align:right;
+	margin-top:60px;
+	font-size:20px;
+	}
+.ads336x280 .text3{
+	width:95%;
+	text-align:right;
+	margin-top:80px;
+	font-size:20px;
+	}
+.ads336x280 .adres{
+	font-size:18px;
+	}
+	
+
+/*For 300x250 size BANNER customize*/
+
+.ads300x250{
+	width:300px;
+	height:250px;
+	}
+.ads300x250 .logo{
+	margin:5px 0px 0px 5px;
+	max-width:80px;
+	}
+.ads300x250 .text1{
+	width:95%;
+	text-align:right;
+	margin-top:5px;
+	font-size:38px;
+	}
+.ads300x250 .text2{
+	width:95%;
+	text-align:right;
+	margin-top:50px;
+	font-size:18px;
+	}
+.ads300x250 .text3{
+	width:95%;
+	text-align:right;
+	margin-top:70px;
+	font-size:18px;
+	}
+.ads300x250 .adres{
+	font-size:16px;
+	}
+	
+
+/*For 728x90 size BANNER customize*/
+
+.ads728x90{
+	width:728px;
+	height:90px;
+	}
+.ads728x90 .mask{
+	position:absolute;
+	width:50%;
+	height:100%;
+	animation-name: anim_mask_left;
+	}
+.ads728x90 .girl{
+	width:30%;
+	margin-left:50%;
+	height:auto;
+	animation-name: anim_girl_left;
+	}
+.ads728x90 .logo{
+	margin-left:5px;
+	margin-top:25px;
+	max-width:80px;
+	}
+.ads728x90 .text1{
+	text-align:left;
+	padding-left:110px;
+	margin-top:0px;
+	font-size:38px;
+	}
+.ads728x90 .text2{
+	text-align:left;
+	padding-left:110px;
+	margin-top:45px;
+	font-size:18px;
+	}
+.ads728x90 .text3{
+	text-align:left;
+	padding-left:110px;
+	margin-top:65px;
+	font-size:18px;
+	}
+.ads728x90 .adres{
+	width:98%;
+	font-size:14px;
+	text-align:right;
+	top:5px;
+	animation-name: anim_adress_left;
+	}
+
+/*For 468x60 size BANNER customize*/
+
+.ads468x60{
+	width:468px;
+	height:60px;
+	}
+.ads468x60 .mask{
+	position:absolute;
+	width:50%;
+	height:100%;
+	animation-name: anim_mask_left;
+	}
+.ads468x60 .girl{
+	width:30%;
+	margin-left:50%;
+	height:auto;
+	animation-name: anim_girl_left;
+	}
+.ads468x60 .logo{
+	margin-left:5px;
+	margin-top:15px;
+	max-width:60px;
+	}
+.ads468x60 .text1{
+	text-align:left;
+	padding-left:70px;
+	margin-top:0px;
+	font-size:24px;
+	}
+.ads468x60 .text2{
+	text-align:left;
+	padding-left:70px;
+	margin-top:28px;
+	font-size:14px;
+	}
+.ads468x60 .text3{
+	text-align:left;
+	padding-left:70px;
+	margin-top:40px;
+	font-size:14px;
+	}
+.ads468x60 .adres{
+	width:98%;
+	font-size:12px;
+	text-align:right;
+	top:5px;
+	animation-name: anim_adress_left;
+	}
+	
+	
+/*For 180x150 size BANNER customize*/
+
+.ads180x150{
+	width:180px;
+	height:150px;
+	}
+.ads180x150 .logo{
+	margin:5px 0px 0px 5px;
+	max-width:60px;
+	}
+.ads180x150 .text1{
+	width:95%;
+	text-align:right;
+	margin-top:0px;
+	font-size:24px;
+	}
+.ads180x150 .text2{
+	width:95%;
+	text-align:right;
+	margin-top:30px;
+	font-size:14px;
+	}
+.ads180x150 .text3{
+	width:95%;
+	text-align:right;
+	margin-top:45px;
+	font-size:14px;
+	}
+.ads180x150 .adres{
+	font-size:12px;
+	}
